@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-5">
+
+    <div class="row text-center mx-auto">
+        <h3>name of the coustomer: &nbsp; {{user.username}}</h3><br><br>
+        {% for j in orders %}
+        <div class="card mb-3 mx-auto" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{j.product.image.url}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{j.product.name}}</h5>
+          <h5 class="card-title">{{j.product.price}}</h5>
+           <h5 class="card-title">{{j.no_of_items}}</h5>
+          <h5 class="card-title">{{j.address}}</h5>
+          <h5 class="card-title">{{j.phone}}</h5>
+          <h5 class="card-title">{{j.ordered_date}}</h5>
+          <h5 class="card-title">{{j.delivery_status}}</h5>
+
+      </div>
+    </div>
+  </div>
+</div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

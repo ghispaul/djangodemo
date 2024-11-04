@@ -1,0 +1,15 @@
+<!--<!DOCTYPE html>-->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-5 p-3 border border-1 border-primary bg-light" style="margin-bottom-100px">
+{% if status == True %}
+
+    <h1>payment success</h1>
+{% else %}
+    <h1>payment failed please try again</h1>
+</div>
+{% endif %}
+
+
+{% endblock %}
